@@ -7,6 +7,7 @@ locals {
 }
 
 resource "google_storage_bucket" "my-bucket" {
+  project = var.project_id
   name          = local.bucket_name
   location      = "US"
   force_destroy = true
